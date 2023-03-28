@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int time = scanner.nextInt();
+        int minute = scanner.nextInt();
+        int cookTime=scanner.nextInt();
+        
+        scanner.close();
+        minute=minute+cookTime;
+        while(true){
+            if (minute<60) {break;}
+            else{
+                minute-=60;
+                time+=1;
+                if (time>23){time=0;}
+            }
+        }
+        
+		System.out.println(time+" "+minute);
+    }
+}
